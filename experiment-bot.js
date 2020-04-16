@@ -16,18 +16,21 @@ client.once('ready', () => {
 	console.info(`Logged in as ${client.user.tag}!`);
 });
 
-// When client reads a message check if the right prefix has been used
-// If prefix is found check against cases
-// If command is matched run that case's code
+// When client reads a message
 client.on('message', message => {
-	if (message.charAt(0) == '!') {
-		console.log(message.content);
+	// Check if prefix is used
+	if (message.content.charAt(0) === '!') {
+		const commandLogSuccessMessage = `Command: ${message.content} used by: ${message.member.displayName}`;
+		const commandLogFailMessage = `Invalid command used by: ${message.member.displayName}`;
+
 		switch (message.content) {
 		case '!ping':
 			message.channel.send('pong!');
+			console.log(commandLogSuccessMessage);
 			break;
 
 		default:
+			console.log(commandLogFailMessage);
 			break;
 		}
 	}
