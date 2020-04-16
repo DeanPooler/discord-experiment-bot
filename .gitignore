@@ -1,0 +1,5 @@
+# nodejs modules folder
+node_modules/*
+
+# dotenv enviroment variables
+.env
