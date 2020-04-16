@@ -1,0 +1,11 @@
+{
+    "name": "discord-experiment-bot",
+    "version": "1.0.0",
+    "description": "A Discord bot to test features with",
+    "main": "experiment-bot.js",
+    "author": "Dean Pooler",
+    "dependencies": {
+        "discord.js": "^12.1.1",
+        "dotenv": "^8.2.0"
+    }
+}
