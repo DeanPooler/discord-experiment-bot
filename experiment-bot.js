@@ -20,9 +20,12 @@ client.once('ready', () => {
 client.on('message', message => {
 	// Check if prefix is used
 	if (message.content.charAt(0) === '!') {
+		// Declare variable for reuasable log message
 		const commandLogSuccessMessage = `Command: ${message.content} used by: ${message.member.displayName}`;
 		const commandLogFailMessage = `Invalid command used by: ${message.member.displayName}`;
 
+		// Check content of the message against a number of cases
+		// If one matches that case's code is triggered
 		switch (message.content) {
 		case '!ping':
 			message.channel.send('pong!');
