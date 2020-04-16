@@ -6,6 +6,7 @@
     "author": "Dean Pooler",
     "dependencies": {
         "discord.js": "^12.1.1",
-        "dotenv": "^8.2.0"
+        "dotenv": "^8.2.0",
+        "eslint": "^6.8.0"
     }
 }
