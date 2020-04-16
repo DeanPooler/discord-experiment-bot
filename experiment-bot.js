@@ -11,7 +11,10 @@ const TOKEN = process.env.TOKEN;
 bot.login(TOKEN);
 
 // When bot is ready log message to console
-bot.on('ready', () => {
+// Can only be triggered once
+bot.once('ready', () => {
 	console.info(`Logged in as ${bot.user.tag}!`);
 });
+
+// When bot reads a message
 
